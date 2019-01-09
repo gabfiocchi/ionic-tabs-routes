@@ -1,3 +1,16 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+  <ion-tabs>
+    <ion-tab-bar color="dark" selected-tab="1">
+      <ion-tab-button tab="index" [ngClass]="{'tab-selected': isActive('/')}">
+        <ion-badge>16</ion-badge>
+        <ion-label>Favorites</ion-label>
+        <ion-icon name="heart"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="home" layout="icon-bottom">
+        <ion-label>Recents</ion-label>
+        <ion-icon name="call"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-app>
