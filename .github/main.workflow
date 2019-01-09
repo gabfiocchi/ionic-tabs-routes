@@ -17,6 +17,6 @@ action "build" {
 action "Deploy" {
   uses = "actions/npm@e7aaefed7c9f2e83d493ff810f17fa5ccd7ed437"
   needs = ["build"]
-  runs = "deploy --only hosting:dev"
-  args = "--token 1/4ct9T8S9g8ACRKN57JnJDuzHYtgCyBmQL3Sa7Ky1cbs"
+  runs = "firebase deploy --token "$FIREBASE_TOKEN"
+  args = "1/4ct9T8S9g8ACRKN57JnJDuzHYtgCyBmQL3Sa7Ky1cbs"
 }
